@@ -1,0 +1,16 @@
+/*List Styles*/
+/*ul li {
+	list-style-type: none;
+}*/
+/*TABLE STYLES*/
+table, td {
+	border-width: 1px;
+	border-collapse: collapse;
+	border-style: solid;
+	border-color: black;
+}
+/*td {
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+}*/

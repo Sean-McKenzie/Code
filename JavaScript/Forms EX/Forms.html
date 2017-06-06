@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript">
+		function checkFirstName()
+		{
+			var firstName = document.form1.fName.value;
+			var pattern = new RegExp("^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$");
+			var res = pattern.test(firstName);
+			if (true==res) 
+			{
+				var lastName = document.form1.lName;
+				document.getElementById("lName").disabled = false;
+			} 
+			else
+			{
+				var lName = document.form1.lName;
+				document.getElementById("lName").disabled = true;
+				var SSN1 = document.form1.SSN1;
+				document.getElementById("SSN1").disabled = true;
+				var SSN2 = document.form1.SSN2;
+				document.getElementById("SSN2").disabled = true;
+				var SSN3 = document.form1.SSN3;
+				document.getElementById("SSN3").disabled = true;
+				alert("Please Verify Input");
+				return false;			
+			}
+			// if (false==res)
+			// {
+			// 	var lastName = document.form1.lName;
+			// 	document.getElementById(lName).disabled=true
+			// }
+
+		}
+		function checkLastName()
+		{
+			var lastName = document.form1.lName.value;
+			pattern = new RegExp("^([A-Za-z]+[,.]?[ ]/|[A-Za-z]+['-]?)+$");
+			var res =pattern.test(lastName);
+			if (true==res)
+			{
+				var SSN1 = document.form1.SSN1;
+				document.getElementById("SSN1").disabled = false;
+			}
+			else
+			{
+				var fName = document.form1.fName;
+				document.getElementById("fName").disabled = true;
+				var SSN1 = document.form1.SSN1;
+				document.getElementById("SSN1").disabled = true;
+				var SSN2 = document.form1.SSN2;
+				document.getElementById("SSN2").disabled = true;
+				var SSN3 = document.form1.SSN3;
+				document.getElementById("SSN3").disabled = true;
+				alert("Please Verify Input");
+				return false;			
+			}
+		}
+		function checkSSN1()
+		{
+			var SSN1 = document.form1.SSN1.value;
+			pattern = new RegExp("^\([0-9]{3}\)");
+			var res =pattern.test(SSN1);
+			if (true==res)
+			{
+				var SSN2 = document.form1.SSN2;
+				document.getElementById("SSN2").disabled = false;
+			}
+			else
+			{
+				var fName = document.form1.fName;
+				document.getElementById("fName").disabled = true;
+				var lName = document.form1.lName;
+				document.getElementById("lName").disabled = true;
+				var SSN2 = document.form1.SSN2;
+				document.getElementById("SSN2").disabled = true;
+				var SSN3 = document.form1.SSN3;
+				document.getElementById("SSN3").disabled = true;
+				alert("Please Verify Input");
+				return false;			
+			}
+		}
+		function checkSSN2()
+		{
+			var SSN2 = document.form1.SSN2.value;
+			pattern = new RegExp("^\([0-9]{2}\)");
+			var res =pattern.test(SSN2);
+			if (true==res)
+			{
+				var SSN3 = document.form1.SSN3;
+				document.getElementById("SSN3").disabled = false;
+			}
+			else
+			{
+				var fName = document.form1.fName;
+				document.getElementById("fName").disabled = true;
+				var lName = document.form1.lName;
+				document.getElementById("lName").disabled = true;
+				var SSN1 = document.form1.SSN1;
+				document.getElementById("SSN1").disabled = true;
+				var SSN3 = document.form1.SSN3;
+				document.getElementById("SSN3").disabled = true;
+				alert("Please Verify Input");
+				return false;			
+			}
+		}
+		function checkSSN3()
+		{
+			var SSN3 = document.form1.SSN3.value;
+			pattern = new RegExp("^\([0-9]{4}\)");
+			var res =pattern.test(SSN3);
+			if (true==res)
+			{
+				var SSN3 = document.form1.SSN3;
+				var fName = document.form1.fName;
+				document.getElementById("fName").disabled = false;
+				var lName = document.form1.lName;
+				document.getElementById("lName").disabled = false;
+				var SSN1 = document.form1.SSN1;
+				document.getElementById("SSN1").disabled = false;
+				var SSN2 = document.form1.SSN2;
+				document.getElementById("SSN2").disabled = false;
+
+			}
+			else
+			{
+				var fName = document.form1.fName;
+				document.getElementById("fName").disabled = true;
+				var lName = document.form1.lName;
+				document.getElementById("lName").disabled = true;
+				var SSN1 = document.form1.SSN1;
+				document.getElementById("SSN1").disabled = true;
+				var SSN2 = document.form1.SSN2;
+				document.getElementById("SSN2").disabled = true;
+				alert("Please Verify Input");
+				return false;
+			}	
+		}	
+		// function submitForm()
+		// {
+		// 	var fName = document.form1.fName.value;
+		// 	var lName = document.form1.lName.value;
+		// 	var SSN1 = document.form1.SSN1.value;
+		// 	var SSN2 = document.form1.SSN2.value;
+		// 	var SSN3 = document.form1.SSN3.value;
+			
+		// }
+			// var a = checkFirstName();
+   //  		var b = checkLastName();
+   //  		var c = checkSSN1();
+   //  		var d = checkSSN2();
+   //  		var e = checkSSN3();
+   //  		if (a===true || b===true || c===true || d===true || e===true)
+   //  		{
+   //  		window.alert("'First Name:'+ fName.value \n'Last Name:'+ lName.value \n'SSN:'+ SSN1.value + SSN2.value + SSN3.value");
+   //   		}
+    	
+    		// var a = document.forms["form1"]["fName"].value;
+    		// if (a == "") 
+    		// {
+      //   	alert("First Name must be filled out");
+      //   	return false;
+    		// }
+    		// var b = document.forms["form1"]["lName"].value;
+    		// if (b == "") 
+    		// {
+      //   	alert("Last Name must be filled out");
+      //   	return false;
+    		// }
+    		// var c = document.forms["form1"]["SSN1"].value;
+    		// if (c == "") 
+    		// {
+      //   	alert("Required entry");
+      //   	return false;
+    		// }
+    		// var d = document.forms["form1"]["SSN2"].value;
+    		// if (d == "") 
+    		// {
+      //   	alert("Required entry");
+      //   	return false;
+    		// }
+    		// var e = document.forms["form1"]["SSN3"].value;
+    		// if (e == "") 
+    		// {
+      //   	alert("Required entry");
+      //   	return false;
+    		// }
+
+		function resetForm ()
+		{
+			document.getElementById("lName").disabled = true;
+			document.getElementById("SSN1").disabled = true;
+			document.getElementById("SSN2").disabled = true;
+			document.getElementById("SSN3").disabled = true;
+		}
+	</script>
+	<title>Name Provider</title>
+</head>
+<body>
+<form id="form1" name="form1">
+	<table>
+		<tr>
+			<td>First Name:</td>
+			<td><input name="fname" type="text" id="fName" value="" onfocusout="checkFirstName()" tabindex="1"></td>
+		</tr>
+		<tr>
+			<td>Last Name:</td>
+			<td><input name="lName" type="text" id="lName" value="" disabled onfocusout="checkLastName()" tabindex="2"></td>
+		</tr>
+		<tr>
+			<tr>	
+					<td>
+					SSN:
+					</td>
+					<td>
+					<table>
+						<td><input name="SSN1" type="text" id="SSN1" value="" disabled placeholder="xxx" maxlength="3" minlength="3" onfocusout="checkSSN1()" tabindex="3"></td>
+						<td><input name="SSN2" type="text" id="SSN2" value="" disabled placeholder="xx" maxlength="2" minlength="2" onfocusout="checkSSN2()" tabindex="4"></td>
+						<td><input name="SSN3" type="text" id="SSN3" value="" disabled placeholder="xxxx" maxlength="4" minlength="4" onfocusout="checkSSN3()" tabindex="5"></td>
+					</table>
+					</td>
+			</tr>
+		</tr>
+	</table>
+	<br/>
+	<input type="button" value="Corrected" name="Corrected" onclick="checkFirstName(); checkLastName(); checkSSN1(); checkSSN2(); checkSSN3()">
+	<br/>
+	<input type="button" value="Submit" name="Submit" onclick="submitForm()">
+	<input type="reset" onclick="resetForm()">
+</form>
+</body>
+</html>
