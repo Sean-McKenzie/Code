@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!--        CC Card Check Page
+      		Author: Sean McKenzie
+      		Date:   05/25/2017
+
+      		Filename:         Forms.html
+      		Supporting files: styles.css -->
+
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript">
+//Verifies each text box//
 		function checkFirstName()
 		{
 			var firstName = document.form1.fName.value;
@@ -26,11 +34,6 @@
 				alert("Please Verify Input");
 				return false;			
 			}
-			// if (false==res)
-			// {
-			// 	var lastName = document.form1.lName;
-			// 	document.getElementById(lName).disabled=true
-			// }
 
 		}
 		function checkLastName()
@@ -137,6 +140,7 @@
 				return false;
 			}	
 		}	
+		//This didn't work//
 		// function submitForm()
 		// {
 		// 	var fName = document.form1.fName.value;
@@ -187,6 +191,9 @@
       //   	return false;
     		// }
 
+
+
+// This is to reset the form//
 		function resetForm ()
 		{
 			document.getElementById("lName").disabled = true;
@@ -200,29 +207,30 @@
 <body>
 <form id="form1" name="form1">
 	<table>
-		<tr>
-			<td>First Name:</td>
-			<td><input name="fname" type="text" id="fName" value="" onfocusout="checkFirstName()" tabindex="1"></td>
-		</tr>
-		<tr>
-			<td>Last Name:</td>
-			<td><input name="lName" type="text" id="lName" value="" disabled onfocusout="checkLastName()" tabindex="2"></td>
-		</tr>
-		<tr>
-			<tr>	
-					<td>
-					SSN:
-					</td>
-					<td>
-					<table>
-						<td><input name="SSN1" type="text" id="SSN1" value="" disabled placeholder="xxx" maxlength="3" minlength="3" onfocusout="checkSSN1()" tabindex="3"></td>
-						<td><input name="SSN2" type="text" id="SSN2" value="" disabled placeholder="xx" maxlength="2" minlength="2" onfocusout="checkSSN2()" tabindex="4"></td>
-						<td><input name="SSN3" type="text" id="SSN3" value="" disabled placeholder="xxxx" maxlength="4" minlength="4" onfocusout="checkSSN3()" tabindex="5"></td>
-					</table>
-					</td>
-			</tr>
-		</tr>
-	</table>
+ 		<tr>
+ 			<td>First Name:</td>
+ 			<td><input name="fname" type="text" id="fName" value="" onfocusout="checkFirstName()" tabindex="1"></td>
+ 		</tr>
+ 		<tr>
+ 			<td>Last Name:</td>
+ 			<td><input name="lName" type="text" id="lName" value=""  onfocusout="checkLastName()" tabindex="2"></td>
+ 		</tr>
+ 		<tr>
+ 			<tr>	
+ 					<td>
+ 					SSN:
+ 					</td>
+ 					<td>
+ 					<table>
+ 						<td><input name="SSN1" type="text" id="SSN1" value=""  placeholder="xxx" maxlength="3" minlength="3" onfocusout="checkSSN1()" tabindex="3"></td>
+ 						<td><input name="SSN2" type="text" id="SSN2" value=""  placeholder="xx" maxlength="2" minlength="2" onfocusout="checkSSN2()" tabindex="4"></td>
+ 						<td><input name="SSN3" type="text" id="SSN3" value=""  placeholder="xxxx" maxlength="4" minlength="4" onfocusout="checkSSN3()" tabindex="5"></td>
+ 					</table>
+ 					</td>
+ 			</tr>
+ 		</tr>
+ 	</table>
+ 	<br/>
 	<br/>
 	<input type="button" value="Corrected" name="Corrected" onclick="checkFirstName(); checkLastName(); checkSSN1(); checkSSN2(); checkSSN3()">
 	<br/>

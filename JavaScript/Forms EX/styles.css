@@ -1,16 +1,14 @@
-/*List Styles*/
-/*ul li {
-	list-style-type: none;
-}*/
-/*TABLE STYLES*/
-table, td {
+/*<!--      CC Card Check Page
+      		Author: Sean McKenzie
+      		Date:   05/25/2017
+
+      		Filename: styles.css
+      		Supports: Forms.html -->*/
+
+/*Table Style*/
+table, td{
 	border-width: 1px;
 	border-collapse: collapse;
 	border-style: solid;
 	border-color: black;
 }
-/*td {
-	border-width: 1px;
-	border-style: solid;
-	border-color: black;
-}*/
