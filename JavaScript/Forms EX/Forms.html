@@ -142,12 +142,14 @@
 		}	
 		//This didn't work//
 
-			
-		// 	var fName = document.form1.fName.value;
-		// 	var lName = document.form1.lName.value;
-		// 	var SSN1 = document.form1.SSN1.value;
-		// 	var SSN2 = document.form1.SSN2.value;
-		// 	var SSN3 = document.form1.SSN3.value;
+			function submitForm(){
+			var fName = document.form1.fName.value;
+			var lName = document.form1.lName.value;
+			var SSN1 = document.form1.SSN1.value;
+			var SSN2 = document.form1.SSN2.value;
+			var SSN3 = document.form1.SSN3.value;
+			window.alert("First Name: "+ fName + "\nLast Name: " + lName + "\nSSN: " + SSN1 + SSN2 + SSN3);
+		}
 			
 		// }
 			// var a = checkFirstName();
@@ -234,7 +236,7 @@
 	<br/>
 	<input type="button" value="Corrected" name="Corrected" onclick="checkFirstName(); checkLastName(); checkSSN1(); checkSSN2(); checkSSN3()">
 	<br/>
-<!-- 	<input type="button" value="Submit" name="Submit" onclick="submitForm()"> -->
+	<input type="button" value="Submit" name="Submit" onclick="submitForm()">
 	<input type="reset" onclick="resetForm()">
 </form>
 </body>
