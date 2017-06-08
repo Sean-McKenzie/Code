@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript">
-//Verifies each text box//
+//Verifies input for the First Name box//
 		function checkFirstName()
 		{
 			var firstName = document.form1.fName.value;
@@ -34,8 +34,8 @@
 				alert("Please Verify Input");
 				return false;			
 			}
-
 		}
+//Verifies input for the Last Name box//		
 		function checkLastName()
 		{
 			var lastName = document.form1.lName.value;
@@ -60,6 +60,7 @@
 				return false;			
 			}
 		}
+//Verifies input for the first SSN box//		
 		function checkSSN1()
 		{
 			var SSN1 = document.form1.SSN1.value;
@@ -84,6 +85,7 @@
 				return false;			
 			}
 		}
+//Verifies input for the second SSN box//		
 		function checkSSN2()
 		{
 			var SSN2 = document.form1.SSN2.value;
@@ -108,6 +110,7 @@
 				return false;			
 			}
 		}
+//Verifies input for the third SSN box//		
 		function checkSSN3()
 		{
 			var SSN3 = document.form1.SSN3.value;
@@ -140,8 +143,7 @@
 				return false;
 			}	
 		}	
-		//This didn't work//
-
+//This is to display the input information//
 			function submitForm(){
 			var fName = document.form1.fName.value;
 			var lName = document.form1.lName.value;
@@ -150,51 +152,6 @@
 			var SSN3 = document.form1.SSN3.value;
 			window.alert("First Name: "+ fName + "\nLast Name: " + lName + "\nSSN: " + SSN1 + SSN2 + SSN3);
 		}
-			
-		// }
-			// var a = checkFirstName();
-   //  		var b = checkLastName();
-   //  		var c = checkSSN1();
-   //  		var d = checkSSN2();
-   //  		var e = checkSSN3();
-   //  		if (a===true || b===true || c===true || d===true || e===true)
-   //  		{
-   //  		window.alert("'First Name:'+ fName.value \n'Last Name:'+ lName.value \n'SSN:'+ SSN1.value + SSN2.value + SSN3.value");
-   //   		}
-    	
-    		// var a = document.forms["form1"]["fName"].value;
-    		// if (a == "") 
-    		// {
-      //   	alert("First Name must be filled out");
-      //   	return false;
-    		// }
-    		// var b = document.forms["form1"]["lName"].value;
-    		// if (b == "") 
-    		// {
-      //   	alert("Last Name must be filled out");
-      //   	return false;
-    		// }
-    		// var c = document.forms["form1"]["SSN1"].value;
-    		// if (c == "") 
-    		// {
-      //   	alert("Required entry");
-      //   	return false;
-    		// }
-    		// var d = document.forms["form1"]["SSN2"].value;
-    		// if (d == "") 
-    		// {
-      //   	alert("Required entry");
-      //   	return false;
-    		// }
-    		// var e = document.forms["form1"]["SSN3"].value;
-    		// if (e == "") 
-    		// {
-      //   	alert("Required entry");
-      //   	return false;
-    		// }
-
-
-
 // This is to reset the form//
 		function resetForm ()
 		{
@@ -207,21 +164,18 @@
 	<title>Name Provider</title>
 </head>
 <body>
-<form id="form1" name="form1">
-	<table>
- 		<tr>
- 			<td>First Name:</td>
- 			<td><input name="fname" type="text" id="fName" value="" onfocusout="checkFirstName()" tabindex="1"></td>
- 		</tr>
- 		<tr>
- 			<td>Last Name:</td>
- 			<td><input name="lName" type="text" id="lName" value=""  onfocusout="checkLastName()" tabindex="2"></td>
- 		</tr>
- 		<tr>
- 			<tr>	
- 					<td>
- 					SSN:
- 					</td>
+		<form id="form1" name="form1">
+			<table>
+ 				<tr>
+ 					<td>First Name:</td>
+ 					<td><input name="fname" type="text" id="fName" value="" onfocusout="checkFirstName()" tabindex="1"></td>
+ 				</tr>
+ 				<tr>
+ 					<td>Last Name:</td>
+ 					<td><input name="lName" type="text" id="lName" value=""  onfocusout="checkLastName()" tabindex="2"></td>
+ 				</tr>
+ 				<tr>	
+ 					<td>SSN:</td>
  					<td>
  					<table>
  						<td><input name="SSN1" type="text" id="SSN1" value=""  placeholder="xxx" maxlength="3" minlength="3" onfocusout="checkSSN1()" tabindex="3"></td>
@@ -229,15 +183,14 @@
  						<td><input name="SSN3" type="text" id="SSN3" value=""  placeholder="xxxx" maxlength="4" minlength="4" onfocusout="checkSSN3()" tabindex="5"></td>
  					</table>
  					</td>
- 			</tr>
- 		</tr>
- 	</table>
- 	<br/>
-	<br/>
-	<input type="button" value="Recheck" name="Recheck" onclick="checkFirstName(); checkLastName(); checkSSN1(); checkSSN2(); checkSSN3()">
-	<br/>
-	<input type="button" value="Submit" name="Submit" onclick="submitForm()">
-	<input type="reset" onclick="resetForm()">
-</form>
+ 				</tr>
+  			</table>
+ 				<br/>
+				<br/>
+				<input type="button" value="Recheck" name="Recheck" onclick="checkFirstName(); checkLastName(); checkSSN1(); checkSSN2(); checkSSN3()">
+				<br/>
+				<input type="button" value="Submit" name="Submit" onclick="submitForm()">
+				<input type="reset" onclick="resetForm()">
+		</form>
 </body>
 </html>
