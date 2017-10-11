@@ -6,12 +6,14 @@
 // 	print (i)
 // }
 // prints 0-9
+
 // when need to set a condition to decide number of times
 // replace the 3rd dot with the evaluator
 // for i in 0 ..< 10
 // {
 // 	print (i)
 // }
+
 // example with a variable using variable assignments
 // var start = 1
 // var stop = 100
@@ -19,6 +21,7 @@
 // {
 // 	print (i)
 // }
+
 // STRIDE (going from a value to a value by an increment)
 // var start = 0
 // var stop = 101
@@ -27,10 +30,12 @@
 // {
 // 	print ("Current Even number \(i)")
 // }
+
 // WHILE loops in Swift
-var increment: Int = 0
-while (increment < 11)
-{
-	print ("my increment is \(increment)")
-	increment = increment + 1
-}
+// var increment: Int = 0
+// while (increment < 11)
+// {
+// 	print ("my increment is \(increment)")
+//  increment is the variable, adding +1 to variable as loop moves
+// 	increment = increment + 1
+// }
