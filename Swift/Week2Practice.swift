@@ -20,10 +20,17 @@
 // 	print (i)
 // }
 // STRIDE (going from a value to a value by an increment)
-var start = 0
-var stop = 101
-//      Function   start        end     increment
-for i in stride( from: start, to: stop, by: 2)
+// var start = 0
+// var stop = 101
+//       Function   start        end     increment
+// for i in stride( from: start, to: stop, by: 2)
+// {
+// 	print ("Current Even number \(i)")
+// }
+// WHILE loops in Swift
+var increment: Int = 0
+while (increment < 11)
 {
-	print ("Current Even number \(i)")
+	print ("my increment is \(increment)")
+	increment = increment + 1
 }
