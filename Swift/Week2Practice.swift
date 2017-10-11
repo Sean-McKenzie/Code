@@ -36,6 +36,18 @@
 // while (increment < 11)
 // {
 // 	print ("my increment is \(increment)")
-//  increment is the variable, adding +1 to variable as loop moves
+// // increment is the variable, adding +1 to variable as loop moves
 // 	increment = increment + 1
 // }
+
+// // REPEAT WHILE loops in Swift
+// var increment: Int = 0
+// repeat
+// {
+// 	print ("my increment is \(increment)")
+// 	increment = increment+1
+// } 
+//	while (increment < 11)
+
+// FUNCTIONS in Swift
+
