@@ -49,5 +49,19 @@
 // } 
 //	while (increment < 11)
 
-// FUNCTIONS in Swift
+// // FUNCTIONS in Swift
+// func SayHello()
+// {
+// 	print ("Hello")
+// }
+// // must explicitly call fuction
+// SayHello()
 
+// calculations functions
+// func PerformADD( i1:Int, i2:Int ) -> Int
+// {
+// 	let output: Int = i1+i2;
+// 	return output
+// }
+// var outlet: Int = PerformADD ( i1:1, i2:2)
+// print ("\(outlet)")
