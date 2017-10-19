@@ -65,3 +65,33 @@
 // }
 // var outlet: Int = PerformADD ( i1:1, i2:2)
 // print ("\(outlet)")
+
+// Swapping variables
+// var a: Int = 1
+// var b: Int = 2
+// var temp = 0
+// temp = a
+// a = b
+// b = temp
+
+// ASSESMENT
+// func CalculateGrossIncome (hourlyRate: Double, NumHoursWorked: Double) -> Double
+// {
+// 	let Amount = hourlyRate*NumHoursWorked
+// 	return Amount
+// }
+// var salary: Double = CalculateGrossIncome(hourlyRate: 37.5, NumHoursWorked: 40)
+// print ("Your gross income based on hourly rate is $\(salary)")
+
+// func FibonacciSequence (Rank: Int) -> Int
+// {
+// 	var term: Int = 1;
+// 	while ()
+// 	{
+
+// 	}
+// 	let result = term;
+// 	return result;
+// }
+// var term50: Int = FibonacciSequence (Rank: 50)
+// print ("The fib number at position 50 is = \(term50)")
